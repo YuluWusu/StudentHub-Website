@@ -1,0 +1,271 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Hub - Ghi Chú</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <link rel="stylesheet" href="css/Ghichu.css" />
+    <link rel="stylesheet" href="css/CaiDatMacDinh.css" />
+    <link rel="icon" type="image/x-icon" href="object/Logo HUIT-01.ico">
+    <script src="javascript/Ghichu.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <img src="object/huitpng.png" alt="Logo" class="logo" />
+      <h1><a href="Trangchu.html">Student Hub</a></h1>
+    </header>
+    <div class="layout">
+      <!---------------THANH DOC--------------->
+      <!----------------POPUP----------------->
+      <div class="popup-overlay" id="popup-overlay">
+        <div class="popup">
+          <span class="close-btn" onclick="closePopup()">&times;</span>
+          <h2 id="popup-title">thao tác</h2>
+          <form onsubmit="submitForm(event)">
+                <div class="mb-3" id="text-input-group">
+            <label for="popup-content" class="form-label">Tên </label>
+            <textarea
+              id="popup-content"
+              class="form-control"
+              rows="1"
+             
+            ></textarea>
+          </div>
+
+           <!-- Input file -->
+        <div class="mb-3 d-none" id="file-input-group">
+          <label for="popup-file" class="form-label">Chọn tệp</label>
+          <input type="file" id="popup-file" class="form-control" />
+        </div>
+
+          <div class="mb-3">
+            <label for="popup-date" class="form-label">Ngày thêm</label>
+            <input type="date" id="popup-date" class="form-control" required />
+          </div>
+          <button type="submit" class="btn btn-primary">Lưu</button>
+        </div>
+          </form>
+          
+      </div>
+      <script src="javascript/thaotac.js"></script>
+      <!----------------------POPUP------------------->
+      <aside class="sidebar">
+        <p class="sidebar-title">Thao tác</p>
+        <div class="actions">
+          <button
+            class="btn btn-custom mb-2 w-100 text-start"
+            onclick="openPopup('Thêm bài tập')"
+          >
+            <i class="fas fa-plus me-2"></i> Thêm bài tập
+          </button>
+          <button
+            class="btn btn-custom mb-2 w-100 text-start"
+            onclick="openPopup('Thêm tiểu luận')"
+          >
+            <i class="fas fa-file-alt me-2"></i> Thêm tiểu luận
+          </button>
+          <button
+            class="btn btn-custom mb-2 w-100 text-start"
+            onclick="openPopup('Thêm môn học')"
+          >
+            <i class="fas fa-book me-2"></i> Thêm môn học
+          </button>
+          <button
+            class="btn btn-custom mb-2 w-100 text-start"
+            onclick="openPopup('Thêm vào lịch học')"
+          >
+            <i class="fas fa-calendar-plus me-2"></i> Thêm vào lịch học
+          </button>
+          <button
+            class="btn btn-custom mb-2 w-100 text-start"
+            onclick="openPopup('Đăng tài liệu')"
+          >
+            <i class="fas fa-upload me-2"></i> Đăng tài liệu
+          </button>
+          <button
+            class="btn btn-custom mb-2 w-100 text-start"
+            onclick="openPopup('Tải tài liệu')"
+          >
+            <i class="fas fa-download me-2"></i> Tải tài liệu
+          </button>
+        </div>
+
+        <nav class="main-nav">
+          <p class="sidebar-title">Bảng điều khiển</p>
+          <ul class="list-unstyled">
+            <li class="nav-item-custom">
+              <a href="Khoahoc.html" class="nav-link-custom">
+                <i class="fas fa-graduation-cap me-2"></i> Khoá học
+              </a>
+            </li>
+            <li class="nav-item-custom">
+              <a href="Ghichu.html" class="nav-link-custom">
+                <i class="fas fa-sticky-note me-2"></i> Ghi chú
+              </a>
+            </li>
+            <li class="nav-item-custom">
+              <a href="Kehoach.html" class="nav-link-custom">
+                <i class="fas fa-tasks me-2"></i> Kế hoạch
+              </a>
+            </li>
+            <li class="nav-item-custom">
+              <a href="Tieuluan.html" class="nav-link-custom">
+                <i class="fas fa-file-signature me-2"></i> Bài tiểu luận
+              </a>
+            </li>
+            <li class="nav-item-custom">
+              <a href="Baitap.html" class="nav-link-custom">
+                <i class="fas fa-book-open me-2"></i> Bài tập
+              </a>
+            </li>
+            <li class="nav-item-custom">
+              <a href="Sach.html" class="nav-link-custom">
+                <i class="fas fa-book me-2"></i> Sách
+              </a>
+            </li>
+            <li class="nav-item-custom">
+              <a href="Tailieuhoctap.html" class="nav-link-custom">
+                <i class="fas fa-file-pdf me-2"></i> Tài liệu học tập
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="links">
+          <a
+            href="#"
+            class="d-flex align-items-center gap-2 py-2 px-3 text-decoration-none"
+          >
+            <i class="fas fa-cog"></i> Cài đặt
+          </a>
+          <a
+            href="#"
+            class="d-flex align-items-center gap-2 py-2 px-3 text-decoration-none"
+          >
+            <i class="fas fa-question-circle"></i> Trợ giúp
+          </a>
+          <a
+            href="DangKyDangNhap.html"
+            class="d-flex align-items-center gap-2 py-2 px-3 text-decoration-none"
+          >
+            <i class="fas fa-sign-out-alt"></i> Đăng xuất
+          </a>
+        </div>
+      </aside>
+        <!---------------THANH DOC--------------->
+        <!---------------NỘI DUNG CHÍNH---------------->
+        <main class="main ">
+            <div class="mainnghichu">
+                <!---------------THANH TRAI--------------->
+                <div class="thanhtrai">
+                    <span class="panel-title">Ghi chú mới nhất</span>
+                    <ul class="ghichu">
+                        <li>Trang mới</li>
+                        <li>Hướng dẫn học tập</li>
+                        <li>Ghi chú bài giảng</li>
+                        <li>Ghi chú #1</li>
+                        <li>Ghi chú #2</li>
+                        <li>Ghi chú #3</li>
+                        <li>Ghi chú #4</li>
+                        <li class="add">+ Trang mới</li>
+                    </ul>
+                </div>
+                <!---------------GIUA--------------->
+                <div class="noidung">
+                    <form id="noteForm" class="note-form">
+                        <input type="text" id="noteTitle" style="color:#ffffff" placeholder="Nhập tiêu đề..." />
+                        <input type="date" id="noteDate" placeholder="ngày/tháng/năm" required />
+                        <input type="color" id="noteColor" value="#e41a6b" />
+                        <button type="submit" class="btn-ghichu blue">Thêm ghi chú</button>
+                    </form>
+                    <div>
+                        <ul class="danh-sach-ghi-chu">
+                            <li class="muc-ghi-chu">
+                                <div class="noi-dung">
+                                    <span class="dau-mau" style="background:#2dd4bf"></span>
+                                    <div class="thong-tin">
+                                        <div class="ten-ghi-chu">Cơ Sở Dữ Liệu</div>
+                                        <div class="ngay-thang">Chủ nhật, ngày 5 tháng 10</div>
+                                    </div>
+                                </div>
+                                <button class="nut-sao">★</button>
+                            </li>
+                            <li class="muc-ghi-chu">
+                                <div class="noi-dung">
+                                    <span class="dau-mau" style="background:#60a5fa"></span>
+                                    <div class="thong-tin">
+                                        <div class="ten-ghi-chu">Thể Chất 2</div>
+                                        <div class="ngay-thang">Thứ 3, ngày 30 tháng 9</div>
+                                    </div>
+                                </div>
+                                <button class="nut-sao">★</button>
+                            </li>
+                            <li class="muc-ghi-chu">
+                                <div class="noi-dung">
+                                    <span class="dau-mau" style="background:#f472b6"></span>
+                                    <div class="thong-tin">
+                                        <div class="ten-ghi-chu">Chủ Nghĩa Xã Hội</div>
+                                        <div class="ngay-thang">Thứ 5, ngày 23 tháng 10</div>
+                                    </div>
+                                </div>
+                                <button class="nut-sao">★</button>
+                            </li>
+                            <li class="muc-ghi-chu">
+                                <div class="noi-dung">
+                                    <span class="dau-mau" style="background:#f59e0b"></span>
+                                    <div class="thong-tin">
+                                        <div class="ten-ghi-chu">Thiết Kế Web</div>
+                                        <div class="ngay-thang">Thứ 2, ngày 15 tháng 9</div>
+                                    </div>
+                                </div>
+                                <button class="nut-sao">★</button>
+                            </li>
+                            <li class="muc-ghi-chu">
+                                <div class="noi-dung">
+                                    <span class="dau-mau" style="background:#ef4444"></span>
+                                    <div class="thong-tin">
+                                        <div class="ten-ghi-chu">Thực hành lập trình hướng đối tượng</div>
+                                        <div class="ngay-thang">Thứ 6, ngày 22 tháng 8</div>
+                                    </div>
+                                </div>
+                                <button class="nut-sao">★</button>
+                            </li>
+                            <li class="muc-ghi-chu">
+                                <div class="noi-dung">
+                                    <span class="dau-mau" style="background:#a78bfa"></span>
+                                    <div class="thong-tin">
+                                        <div class="ten-ghi-chu">Anh Văn 2</div>
+                                        <div class="ngay-thang">Thứ 7, ngày 7 tháng 1</div>
+                                    </div>
+                                </div>
+                                <button class="nut-sao">★</button>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+                <!---------------THANH PHAI--------------->
+                <div class="thanhphai">
+                    <div class="panel-title">★ Yêu thích</div>
+                    <div class="favorites" id="favorites">
+                        <div class="empty">Hiện chưa có ghi chú</div>
+                    </div>
+
+                </div>
+            </div>
+            <!---------------THANH PHAI--------------->
+        </main>
+    </div>
+    <script src="javascript/Ghichu.js"></script>
+</body>
+</html>

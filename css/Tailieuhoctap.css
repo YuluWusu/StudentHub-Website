@@ -1,0 +1,363 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    background: linear-gradient(135deg, #0f0f0f 0%, #1a1a2e 50%, #16213e 100%);
+    color: #f1f1f1;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+    a:visited {
+        color: inherit;
+    }
+
+    a:hover {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    a:active {
+        color: inherit;
+    }
+/* ======== Nội dung chính ======== */
+.main {
+    padding: 20px;
+    overflow-y: auto;
+    background: rgba(10, 10, 20, 0.3);
+}
+
+.courses-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.nut {
+    background: linear-gradient(135deg, rgba(60,60,80,0.8) 0%, rgba(40,40,60,0.8) 100%);
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+    .nut:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+    }
+
+/* ======== Container tài liệu ======== */
+.container-document {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    gap: 25px;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+/* ======== Các danh mục ======== */
+.Community-Platform,
+.Learning-Tool
+ {
+    background: rgba(30, 30, 40, 0.7);
+    padding: 1.2rem;
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+    animation: fadeIn 0.6s ease forwards;
+    width:300px;
+}
+.Creation-Tool {
+    background: rgba(30, 30, 40, 0.7);
+    padding: 1.2rem;
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+    animation: fadeIn 0.6s ease forwards;
+    width: 300px;
+    height:58%;
+}
+.Find-Answers {
+    background: rgba(30, 30, 40, 0.7);
+    padding: 1.2rem;
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+    animation: fadeIn 0.6s ease forwards;
+    width: 300px;
+    height: 80%;
+}
+.Job-Tool {
+    background: rgba(30, 30, 40, 0.7);
+    padding: 1.2rem;
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+    animation: fadeIn 0.6s ease forwards;
+    width: 300px;
+    height: 51%;
+}
+.Marketplace {
+    background: rgba(30, 30, 40, 0.7);
+    padding: 1.2rem;
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+    animation: fadeIn 0.6s ease forwards;
+    width: 300px;
+    height: 40%;
+}
+
+    .Community-Platform:hover,
+    .Creation-Tool:hover,
+    .Find-Answers:hover,
+    .Job-Tool:hover,
+    .Learning-Tool:hover,
+    .Marketplace:hover {
+        transform: translateY(-5px);
+    }
+
+/* ======== Tiêu đề danh mục ======== */
+.tieude1, .tieude2, .tieude3, .tieude4, .tieude5, .tieude6 {
+    padding: 2px;
+    border-radius: 3px;
+    font-size: 24px;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+
+/* ======== Card tài liệu ======== */
+.document1, .document2, .document3, .document4, .document5, .document6 {
+    background: rgba(40, 40, 50, 0.7);
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+    .document1::before, .document2::before, .document3::before, .document4::before, .document5::before, .document6::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+        transition: left 0.5s;
+    }
+
+    .document1:hover::before, .document2:hover::before, .document3:hover::before, .document4:hover::before, .document5:hover::before, .document6:hover::before {
+        left: 100%;
+    }
+
+    .document1:hover, .document2:hover, .document3:hover, .document4:hover, .document5:hover, .document6:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    }
+    .document1:hover
+    {
+        background: rgba(241, 121, 252, 0.74);
+    }
+    .document2:hover
+    {
+        background: rgba(182, 182, 184, 0.9); 
+    }
+    .document3:hover
+    {
+        background: rgba(252, 80, 12, 0.9);
+    }
+    .document4:hover
+    {
+        background: rgba(159, 170, 0, 0.9);
+    }
+    .document5:hover
+    {
+        background: rgba(15, 233, 98, 0.9);
+    }
+    .document6:hover
+    {
+        background: rgba(243, 205, 37, 0.9);
+    }
+
+/* ======== Màu border cho các document ======== */
+.document1 {
+    background: linear-gradient(135deg, rgba(141, 68, 173, 0.25) 0%, rgba(141, 68, 173, 0.5) 100%);
+}
+
+.document2 {
+    background: linear-gradient(135deg, rgba(211,211,211,0.3) 0%, rgba(169,169,169,0.5) 100%);
+}
+
+.document3 {
+    background: linear-gradient(135deg, rgba(231, 76, 60, 0.25) 0%, rgba(231, 76, 60, 0.5) 100%);
+}
+
+.document4 {
+    background: linear-gradient(135deg, rgba(241, 196, 15, 0.25) 0%, rgba(241, 196, 15, 0.5) 100%);
+}
+
+.document5 {
+    background: linear-gradient(135deg, rgba(46, 204, 113, 0.25) 0%, rgba(46, 204, 113, 0.5) 100%);
+}
+
+.document6 {
+    background: linear-gradient(135deg, rgba(255,165,0,0.3) 0%, rgba(255,140,0,0.5) 100%);
+}
+
+/* ======== Platform Logo ======== */
+.platform-header {
+    display: grid;
+    grid-template-columns: 35px auto;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+    .platform-header img {
+        width: 35px;
+        height: 35px;
+        border-radius: 8px;
+        object-fit: cover;
+        border: 2px solid rgba(255, 255, 255, 0.2);
+        transition: all 0.3s ease;
+    }
+
+.document1:hover .platform-header img,
+.document2:hover .platform-header img,
+.document3:hover .platform-header img,
+.document4:hover .platform-header img,
+.document5:hover .platform-header img,
+.document6:hover .platform-header img {
+    border-color: rgba(255, 255, 255, 0.4);
+    transform: scale(1.1);
+}
+
+.platform-header p {
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+}
+
+/* ======== Nội dung document ======== */
+.document1 p, .document2 p, .document3 p, .document4 p, .document5 p, .document6 p {
+    font-size: 14px;
+    color: white;
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+.document1 a, .document2 a, .document3 a, .document4 a, .document5 a, .document6 a {
+    color: #7fbfff;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: color 0.3s ease;
+}
+
+    .document1 a:hover, .document2 a:hover, .document3 a:hover, .document4 a:hover, .document5 a:hover, .document6 a:hover {
+        color: #4d9fff;
+    }
+
+/* ======== New page ======== */
+.newpage1, .newpage2, .newpage3, .newpage4, .newpage5, .newpage6 {
+    background: rgba(40, 40, 50, 0.5);
+    padding: 12px;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px dashed rgba(255, 255, 255, 0.2);
+    height: 50px;
+}
+
+    .newpage1:hover, .newpage2:hover, .newpage3:hover, .newpage4:hover, .newpage5:hover ,.newpage6:hover{
+        background: rgba(50, 50, 60, 0.7);
+        border-color: rgba(255, 255, 255, 0.4);
+        transform: translateY(-2px);
+    }
+
+    .newpage1 p{
+        color: #ccc;
+        font-weight: 500;
+    }
+    .newpage2 p {
+        color: tomato;
+        font-weight: 500;
+    }
+    .newpage3 p {
+        color: #FFD580;
+        font-weight: 500;
+    }
+    .newpage4 p {
+        color: lightyellow;
+        font-weight: 500;
+    }
+    .newpage5 p {
+        color: violet;
+        font-weight: 500;
+    }
+.newpage6 {
+    color: orange;
+    font-weight: 500;
+}
+        /* ======== Hiệu ứng loading và animation ======== */
+        @keyframes fadeIn {
+            from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ======== Responsive ======== */
+@media (max-width: 1200px) {
+    .container-document {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .layout {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    .container-document {
+        grid-template-columns: 1fr;
+    }
+}

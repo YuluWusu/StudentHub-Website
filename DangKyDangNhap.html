@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Nhập</title>
+    <link rel="stylesheet" href="css/DangKyDangNhap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> <!--CloudFlare cai nay chua cac logo-->
+    <link rel="icon" type="image/x-icon" href="object/Logo HUIT-01.ico">
+</head>
+<body>
+    <div class="container">
+        <!--Dang nhap-->
+        <div class="form-box login">
+            <form action="#">
+                <h1>Đăng nhập</h1>
+                <div class="input-box">
+                    <input type="text" id="tendangnhap" placeholder="Tên Đăng Nhập" required>
+                    <i class="fa-solid fa-user"></i>
+                </div>
+                <div class="input-box">
+                    <input type="password" id="matkhau" placeholder="Mật Khẩu" required>
+                    <i class="fa-solid fa-lock"></i>
+                </div>
+                <div class="forgot-link">
+                    <a href="#" onclick="quenMatKhau()">Quên mật khẩu</a>
+                </div>
+                <button type="button" class="btn" onclick="dangNhap()">Đăng nhập</button>
+                <p>Hoặc cũng có thể đăng nhập bằng</p>
+                <div class="social-icon">
+                    <a href="#"><i class="fa-brands fa-google"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-github"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+            </form>
+        </div>
+        <!---Dang ky-->
+        <div class="form-box register">
+            <form action="#" onsubmit="dangKy(event)">
+                <h1>Đăng ký</h1>
+                <div class="input-box">
+                    <input type="text" id="tendangky" placeholder="Tên Đăng Nhập" required>
+                    <i class="fa-solid fa-user"></i>
+                </div>
+                <div class="input-box">
+                    <input type="email" id="emaildangky" placeholder="Email" required>
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div class="input-box">
+                    <input type="password" id="matkhaudangky" placeholder="Mật Khẩu" required>
+                    <i class="fa-solid fa-lock"></i>
+                </div>
+                <button type="submit" class="btn">Đăng ký</button>
+                <p>Hoặc cũng có thể đăng ký bằng</p>
+                <div class="social-icon">
+                    <a href="#"><i class="fa-brands fa-google"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-github"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+            </form>
+        </div>
+        <!---Chuyen trang-->
+        <div class="toggle-box">
+            <!---Chuyen trang trai-->
+            <div class="toggle-panel toggle-left">
+                <h1>Xin chào, Chào mừng bạn đến với Student Hub!</h1>
+                <p>Chưa có tài khoản?</p>
+                <button class="btn register-btn">Đăng ký ngay</button>
+            </div>
+            <!----Chuyen trang phai-->
+            <div class="toggle-panel toggle-right">
+                <h1>Chào mừng quay trở lại!</h1>
+                <p>Bạn đã có tài khoản?</p>
+                <button class="btn login-btn">Đăng nhập</button>
+            </div>
+        </div>
+    </div>
+</body>
+  <script src="javascript/DangKyDangNhap.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</html>

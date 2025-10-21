@@ -1,0 +1,295 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Hub - Sách</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <link rel="stylesheet" href="css/Sach.css" />
+    <link rel="stylesheet" href="css/CaiDatMacDinh.css" />
+    <link rel="icon" type="image/x-icon" href="object/Logo HUIT-01.ico">
+    <script src="javascript/Sach.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <img src="object/huitpng.png" alt="Logo" class="logo" />
+      <h1><a href="Trangchu.html">Student Hub</a></h1>
+    </header>
+    <div class="layout">
+      <!---------------THANH DOC--------------->
+      <!----------------POPUP----------------->
+      <div class="popup-overlay" id="popup-overlay">
+        <div class="popup">
+          <span class="close-btn" onclick="closePopup()">&times;</span>
+          <h2 id="popup-title">thao tác</h2>
+          <form onsubmit="submitForm(event)">
+                <div class="mb-3" id="text-input-group">
+            <label for="popup-content" class="form-label">Tên </label>
+            <textarea
+              id="popup-content"
+              class="form-control"
+              rows="1"
+             
+            ></textarea>
+          </div>
+
+           <!-- Input file -->
+        <div class="mb-3 d-none" id="file-input-group">
+          <label for="popup-file" class="form-label">Chọn tệp</label>
+          <input type="file" id="popup-file" class="form-control" />
+        </div>
+
+          <div class="mb-3">
+            <label for="popup-date" class="form-label">Ngày thêm</label>
+            <input type="date" id="popup-date" class="form-control" required />
+          </div>
+          <button type="submit" class="btn btn-primary">Lưu</button>
+        </div>
+          </form>
+          
+      </div>
+      <script src="javascript/thaotac.js"></script>
+      <!----------------------POPUP------------------->
+      <aside class="sidebar">
+        <p class="sidebar-title">Thao tác</p>
+        <div class="actions">
+          <button
+            class="btn btn-custom mb-2 w-100 text-start"
+            onclick="openPopup('Thêm bài tập')"
+          >
+            <i class="fas fa-plus me-2"></i> Thêm bài tập
+          </button>
+          <button
+            class="btn btn-custom mb-2 w-100 text-start"
+            onclick="openPopup('Thêm tiểu luận')"
+          >
+            <i class="fas fa-file-alt me-2"></i> Thêm tiểu luận
+          </button>
+          <button
+            class="btn btn-custom mb-2 w-100 text-start"
+            onclick="openPopup('Thêm môn học')"
+          >
+            <i class="fas fa-book me-2"></i> Thêm môn học
+          </button>
+          <button
+            class="btn btn-custom mb-2 w-100 text-start"
+            onclick="openPopup('Thêm vào lịch học')"
+          >
+            <i class="fas fa-calendar-plus me-2"></i> Thêm vào lịch học
+          </button>
+          <button
+            class="btn btn-custom mb-2 w-100 text-start"
+            onclick="openPopup('Đăng tài liệu')"
+          >
+            <i class="fas fa-upload me-2"></i> Đăng tài liệu
+          </button>
+          <button
+            class="btn btn-custom mb-2 w-100 text-start"
+            onclick="openPopup('Tải tài liệu')"
+          >
+            <i class="fas fa-download me-2"></i> Tải tài liệu
+          </button>
+        </div>
+
+        <nav class="main-nav">
+          <p class="sidebar-title">Bảng điều khiển</p>
+          <ul class="list-unstyled">
+            <li class="nav-item-custom">
+              <a href="Khoahoc.html" class="nav-link-custom">
+                <i class="fas fa-graduation-cap me-2"></i> Khoá học
+              </a>
+            </li>
+            <li class="nav-item-custom">
+              <a href="Ghichu.html" class="nav-link-custom">
+                <i class="fas fa-sticky-note me-2"></i> Ghi chú
+              </a>
+            </li>
+            <li class="nav-item-custom">
+              <a href="Kehoach.html" class="nav-link-custom">
+                <i class="fas fa-tasks me-2"></i> Kế hoạch
+              </a>
+            </li>
+            <li class="nav-item-custom">
+              <a href="Tieuluan.html" class="nav-link-custom">
+                <i class="fas fa-file-signature me-2"></i> Bài tiểu luận
+              </a>
+            </li>
+            <li class="nav-item-custom">
+              <a href="Baitap.html" class="nav-link-custom">
+                <i class="fas fa-book-open me-2"></i> Bài tập
+              </a>
+            </li>
+            <li class="nav-item-custom">
+              <a href="Sach.html" class="nav-link-custom">
+                <i class="fas fa-book me-2"></i> Sách
+              </a>
+            </li>
+            <li class="nav-item-custom">
+              <a href="Tailieuhoctap.html" class="nav-link-custom">
+                <i class="fas fa-file-pdf me-2"></i> Tài liệu học tập
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="links">
+          <a
+            href="#"
+            class="d-flex align-items-center gap-2 py-2 px-3 text-decoration-none"
+          >
+            <i class="fas fa-cog"></i> Cài đặt
+          </a>
+          <a
+            href="#"
+            class="d-flex align-items-center gap-2 py-2 px-3 text-decoration-none"
+          >
+            <i class="fas fa-question-circle"></i> Trợ giúp
+          </a>
+          <a
+            href="DangKyDangNhap.html"
+            class="d-flex align-items-center gap-2 py-2 px-3 text-decoration-none"
+          >
+            <i class="fas fa-sign-out-alt"></i> Đăng xuất
+          </a>
+        </div>
+      </aside>
+        <!---------------THANH DOC--------------->
+        <!---------------NỘI DUNG CHÍNH---------------->
+        <main class="main">
+            <div class="courses-header">
+                <button class="nut"><i class="fas fa-book"></i> Thư viện Sách & Tài nguyên</button>
+            </div>
+
+            <div class="container-book">
+                <div class="book">
+                    <img src="object/audible.jpg" alt="Audible">
+                    <div class="platform-header">
+                        <img src="object/platform-logo/audible logo.jpg" alt="Audible Logo" class="platform-logo">
+                        <p><b>Audible</b></p>
+                        </div>
+                            <div class="nhanmanh1">Marketplace</div>
+                            <p>Start listening to best-selling audiobook, exclusive Originals, and free podcasts with the Audible app.</p>
+                            <a href="https://www.audible.com/"><i class="fas fa-external-link-alt"></i> audible.com</a>
+                        </div>
+
+                <div class="book">
+                    <img src="object/canva.jpg" alt="Canva">
+                    <div class="platform-header">
+                        <img src="object/platform-logo/canva logo.png" alt="Canva Logo" class="platform-logo">
+                        <p><b>Canva</b></p>
+                    </div>
+                    <div class="nhanmanh2">Creation Tool</div>
+                    <p>Canva is a free-to-use online graphic design tool. Use it to create social media posts, presentations, posters, videos, logos and more.</p>
+                    <a href="https://www.canva.com/"><i class="fas fa-external-link-alt"></i> Canva.com</a>
+                </div>
+
+                <div class="book">
+                    <img src="object/Carrd.jpg" alt="Carrd">
+                    <div class="platform-header">
+                        <img src="object/platform-logo/carrd logo.jpg" alt="Carrd Logo" class="platform-logo">
+                        <p><b>Carrd</b></p>
+                    </div>
+                    <div class="nhanmanh2">Creation Tool</div>
+                    <p>Create fully responsive one-page sites for pretty much anything.</p>
+                    <a href="https://carrd.co/"><i class="fas fa-external-link-alt"></i> Carrd.com</a>
+                </div>
+
+                <div class="book">
+                    <img src="object/Chegg.png" alt="Chegg">
+                    <div class="platform-header">
+                        <img src="object/platform-logo/chegg logo.jpg" alt="Chegg Logo" class="platform-logo">
+                        <p><b>Chegg</b></p>
+                    </div>
+                    <div class="khung1">
+                        <div class="nhanmanh3">Find Answers</div>
+                        <div class="nhanmanh4">Community Platform</div>
+                        <div class="nhanmanh5">Studying Tool</div>
+                        <div class="nhanmanh1">Marketplace</div>
+                    </div>
+                    <p>Get step-by-step textbook Solutions and expert answers, plus textbook rentals, writing help, and more.</p>
+                    <a href="https://www.chegg.com/"><i class="fas fa-external-link-alt"></i> Chegg.com</a>
+                </div>
+
+                        <div class="book">
+                            <img src="object/Code.jpg" alt="Codecademy">
+                            <div class="platform-header">
+                                <img src="object/platform-logo/code logo.jpg" alt="Codecademy Logo" class="platform-logo">
+                                <p><b>Codecademy</b></p>
+                            </div>
+                            <div class="nhanmanh6">Learning Tool</div>
+                            <p>Learn the technical skills to get the job you want. Join over 50 million people choosing Codecademy to start a new career.</p>
+                            <a href="https://www.codecademy.com/"><i class="fas fa-external-link-alt"></i> Codecademy.com</a>
+                        </div>
+
+                        <div class="book">
+                            <img src="object/course-hero.jpg" alt="Course Hero">
+                            <div class="platform-header">
+                                <img src="object/platform-logo/course-hero.jpg" alt="Course Hero Logo" class="platform-logo">
+                                <p><b>Course Hero</b></p>
+                            </div>
+                            <div class="khung2">
+                                <div class="nhanmanh3">Find Answers</div>
+                                <div class="nhanmanh6">Learning Tool</div>
+                                <div class="nhanmanh5">Studying Tool</div>
+                            </div>
+                            <p>Instant access to millions of Study Resources, Course Notes, Test Prep, 24/7 Homework Help, Tutors, and more.</p>
+                            <a href="https://www.coursehero.com/"><i class="fas fa-external-link-alt"></i> Course Hero.com</a>
+                        </div>
+
+                        <div class="book">
+                            <img src="object/Coursera.jpg" alt="Coursera">
+                            <div class="platform-header">
+                                <img src="object/platform-logo/coursera-logo.png" alt="Coursera Logo" class="platform-logo">
+                                <p><b>Coursera</b></p>
+                            </div>
+                            <div class="nhanmanh6">Learning Tool</div>
+                            <p>Instant access to millions of Study Resources, Course Notes, Test Prep, 24/7 Homework Help, Tutors, and more.</p>
+                            <a href="https://www.coursera.org/"><i class="fas fa-external-link-alt"></i> Coursera.com</a>
+                        </div>
+
+                        <div class="book">
+                            <img src="object/drobox.jpg" alt="Dropbox">
+                            <div class="platform-header">
+                                <img src="object/platform-logo/dropbox logo.jpg" alt="Dropbox Logo" class="platform-logo">
+                                <p><b>Dropbox</b></p>
+                            </div>
+                            <div class="nhanmanh7">Utility Tool</div>
+                            <p>Dropbox brings everything traditional files, cloud content, and web shortcuts together in one place.</p>
+                            <a href="https://www.dropbox.com/"><i class="fas fa-external-link-alt"></i> Dropbox.com</a>
+                        </div>
+
+                        <div class="book">
+                            <img src="object/Duolingo.jpg" alt="Duolingo">
+                            <div class="platform-header">
+                                <img src="object/platform-logo/duolingo logo.png" alt="Duolingo Logo" class="platform-logo">
+                                <p><b>Duolingo</b></p>
+                            </div>
+                            <div class="nhanmanh6">Learning Tool</div>
+                            <p>Use our free, fun, and effective language learning app. Learn 30+ languages online with bite-size lessons based on science.</p>
+                            <a href="https://www.duolingo.com/"><i class="fas fa-external-link-alt"></i> Duolingo.com</a>
+                        </div>
+
+                        <div class="book">
+                            <img src="object/easybib.png" alt="EasyBib">
+                            <div class="platform-header">
+                                <img src="object/platform-logo/easybib logo.png" alt="EasyBib Logo" class="platform-logo">
+                                <p><b>EasyBib</b></p>
+                            </div>
+                            <div class="nhanmanh8">Writing Tool</div>
+                            <p>EasyBib has tools to help you create citations for over 50 source types in MLA style, as well as formatting guides.</p>
+                            <a href="https://www.easybib.com/"><i class="fas fa-external-link-alt"></i> EasyBib.com</a>
+                        </div>
+                    </div>
+        </main>
+    </div>
+</body>
+</html>

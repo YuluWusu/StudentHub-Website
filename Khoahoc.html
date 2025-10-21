@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Hub - Khoá Học</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <link rel="stylesheet" href="css/Khoahoc.css" />
+    <link rel="stylesheet" href="css/CaiDatMacDinh.css" />
+    <link rel="icon" type="image/x-icon" href="object/Logo HUIT-01.ico">
+    <script src="javascript/Khoahoc.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <img src="object/huitpng.png" alt="Logo" class="logo" />
+      <h1><a href="Trangchu.html">Student Hub</a></h1>
+    </header>
+    <div class="layout">
+      <!---------------THANH DOC--------------->
+      <!----------------POPUP----------------->
+      <div class="popup-overlay" id="popup-overlay">
+        <div class="popup">
+          <span class="close-btn" onclick="closePopup()">&times;</span>
+          <h2 id="popup-title">thao tác</h2>
+          <form onsubmit="submitForm(event)">
+                <div class="mb-3" id="text-input-group">
+            <label for="popup-content" class="form-label">Tên </label>
+            <textarea
+              id="popup-content"
+              class="form-control"
+              rows="1"
+             
+            ></textarea>
+          </div>
+
+           <!-- Input file -->
+        <div class="mb-3 d-none" id="file-input-group">
+          <label for="popup-file" class="form-label">Chọn tệp</label>
+          <input type="file" id="popup-file" class="form-control" />
+        </div>
+
+          <div class="mb-3">
+            <label for="popup-date" class="form-label">Ngày thêm</label>
+            <input type="date" id="popup-date" class="form-control" required />
+          </div>
+          <button type="submit" class="btn btn-primary">Lưu</button>
+        </div>
+          </form>
+          
+      </div>
+      <script src="javascript/thaotac.js"></script>
+      <!----------------------POPUP------------------->
+      <aside class="sidebar">
+        <p class="sidebar-title">Thao tác</p>
+        <div class="actions">
+          <button
+            class="btn btn-custom mb-2 w-100 text-start"
+            onclick="openPopup('Thêm bài tập')"
+          >
+            <i class="fas fa-plus me-2"></i> Thêm bài tập
+          </button>
+          <button
+            class="btn btn-custom mb-2 w-100 text-start"
+            onclick="openPopup('Thêm tiểu luận')"
+          >
+            <i class="fas fa-file-alt me-2"></i> Thêm tiểu luận
+          </button>
+          <button
+            class="btn btn-custom mb-2 w-100 text-start"
+            onclick="openPopup('Thêm môn học')"
+          >
+            <i class="fas fa-book me-2"></i> Thêm môn học
+          </button>
+          <button
+            class="btn btn-custom mb-2 w-100 text-start"
+            onclick="openPopup('Thêm vào lịch học')"
+          >
+            <i class="fas fa-calendar-plus me-2"></i> Thêm vào lịch học
+          </button>
+          <button
+            class="btn btn-custom mb-2 w-100 text-start"
+            onclick="openPopup('Đăng tài liệu')"
+          >
+            <i class="fas fa-upload me-2"></i> Đăng tài liệu
+          </button>
+          <button
+            class="btn btn-custom mb-2 w-100 text-start"
+            onclick="openPopup('Tải tài liệu')"
+          >
+            <i class="fas fa-download me-2"></i> Tải tài liệu
+          </button>
+        </div>
+
+        <nav class="main-nav">
+          <p class="sidebar-title">Bảng điều khiển</p>
+          <ul class="list-unstyled">
+            <li class="nav-item-custom">
+              <a href="Khoahoc.html" class="nav-link-custom">
+                <i class="fas fa-graduation-cap me-2"></i> Khoá học
+              </a>
+            </li>
+            <li class="nav-item-custom">
+              <a href="Ghichu.html" class="nav-link-custom">
+                <i class="fas fa-sticky-note me-2"></i> Ghi chú
+              </a>
+            </li>
+            <li class="nav-item-custom">
+              <a href="Kehoach.html" class="nav-link-custom">
+                <i class="fas fa-tasks me-2"></i> Kế hoạch
+              </a>
+            </li>
+            <li class="nav-item-custom">
+              <a href="Tieuluan.html" class="nav-link-custom">
+                <i class="fas fa-file-signature me-2"></i> Bài tiểu luận
+              </a>
+            </li>
+            <li class="nav-item-custom">
+              <a href="Baitap.html" class="nav-link-custom">
+                <i class="fas fa-book-open me-2"></i> Bài tập
+              </a>
+            </li>
+            <li class="nav-item-custom">
+              <a href="Sach.html" class="nav-link-custom">
+                <i class="fas fa-book me-2"></i> Sách
+              </a>
+            </li>
+            <li class="nav-item-custom">
+              <a href="Tailieuhoctap.html" class="nav-link-custom">
+                <i class="fas fa-file-pdf me-2"></i> Tài liệu học tập
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="links">
+          <a
+            href="#"
+            class="d-flex align-items-center gap-2 py-2 px-3 text-decoration-none"
+          >
+            <i class="fas fa-cog"></i> Cài đặt
+          </a>
+          <a
+            href="#"
+            class="d-flex align-items-center gap-2 py-2 px-3 text-decoration-none"
+          >
+            <i class="fas fa-question-circle"></i> Trợ giúp
+          </a>
+          <a
+            href="DangKyDangNhap.html"
+            class="d-flex align-items-center gap-2 py-2 px-3 text-decoration-none"
+          >
+            <i class="fas fa-sign-out-alt"></i> Đăng xuất
+          </a>
+        </div>
+      </aside>
+    <!---------------THANH DOC--------------->
+
+    <!---------------NỘI DUNG CHÍNH---------------->
+    <main class="main-content">
+      <!-- ======= LOI TAT =======-->
+       <div class="shortcuts-header">
+        <button class="custom-btn"><i class="fas fa-link"></i> Lối tắt</button>
+      </div>
+      <section class="course-cards">
+        <div class="course-card course-card-1">Anh Văn 2</div>
+        <div class="course-card course-card-2">Thiết Kế Web</div>
+        <div class="course-card course-card-3">Lập Trình Hướng Đối Tượng</div>
+        <div class="course-card course-card-4">Cơ Sở Dữ Liệu</div>
+        <div class="course-card course-card-5">Thể Chất 2</div>
+        <div class="course-card course-card-6">Mạng Máy Tính</div>
+        <div class="course-card course-card-7">Chủ Nghĩa Xã Hội Khoa Học</div>
+      </section>
+      <!-- ======= LOI TAT =======-->
+
+      <!-- ======= CAC MON HOC =======-->
+       <section class="subjects-section">
+            <div class="subjects-header">
+            <button class="custom-btn"><i class="fas fa-smile"></i> Môn Học</button>
+          </div>
+          <section class="subjects-container">
+
+              <div class="subject-item">
+                <p class="subject-title">Anh Văn 2</p>
+                <div class="subject-detail">
+                  <span class="detail-icon">●</span>
+                  <div class="detail-content">
+                    <div class="subject-days">
+                      <span class="day-item">Thứ Ba</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="subject-detail">
+                  <span class="detail-icon">🕒</span>
+                  <div class="detail-content">Tiết: 7 - 9</div>
+                </div>
+                <div class="subject-detail">
+                  <span class="detail-icon">👤</span>
+                  <div class="detail-content">Giảng Viên: Võ Thị Thu Thảo</div>
+                </div>
+                <div class="subject-detail">
+                  <span class="detail-icon">📍</span>
+                  <div class="detail-content">Phòng: D302 - 140 Lê Trọng Tấn</div>
+                </div>
+              </div>
+              
+
+              <div class="subject-item">
+                <p class="subject-title">Thiết kế web</p>
+                <div class="subject-detail">
+                  <span class="detail-icon">●</span>
+                  <div class="detail-content">
+                    <div class="subject-days">
+                      <span class="day-item">Thứ Ba</span>
+                      <span class="day-item">Thứ Năm</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="subject-detail">
+                  <span class="detail-icon">🕒</span>
+                  <div class="detail-content">Tiết: 1 - 5 (Thứ Ba), 1 - 6 (Thứ Năm)</div>
+                </div>
+                <div class="subject-detail">
+                  <span class="detail-icon">👤</span>
+                  <div class="detail-content">Giảng Viên: Huỳnh Thị Cẩm Dung</div>
+                </div>
+                <div class="subject-detail">
+                  <span class="detail-icon">📍</span>
+                  <div class="detail-content">Phòng: A107 (Thứ Ba), A110 (Thứ Năm)</div>
+                </div>
+              </div>
+
+              <div class="subject-item">
+                <p class="subject-title">Cơ sở dữ liệu</p>
+                <div class="subject-detail">
+                  <span class="detail-icon">●</span>
+                  <div class="detail-content">
+                    <div class="subject-days">
+                      <span class="day-item">Thứ Tư</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="subject-detail">
+                  <span class="detail-icon">🕒</span>
+                  <div class="detail-content">Tiết: 1 - 3</div>
+                </div>
+                <div class="subject-detail">
+                  <span class="detail-icon">👤</span>
+                  <div class="detail-content">Giảng Viên: Nguyễn Văn Lễ</div>
+                </div>
+                <div class="subject-detail">
+                  <span class="detail-icon">📍</span>
+                  <div class="detail-content">Phòng: A501 - 140 Lê Trọng Tấn</div>
+                </div>
+              </div>
+
+              <div class="subject-item">
+                <p class="subject-title">Thể Chất 2</p>
+                <div class="subject-detail">
+                  <span class="detail-icon">●</span>
+                  <div class="detail-content">
+                    <div class="subject-days">
+                      <span class="day-item">Thứ Hai</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="subject-detail">
+                  <span class="detail-icon">🕒</span>
+                  <div class="detail-content">Tiết: 3 - 6</div>
+                </div>
+                <div class="subject-detail">
+                  <span class="detail-icon">👤</span>
+                  <div class="detail-content">Giảng Viên: Lê Văn Nhựt</div>
+                </div>
+                <div class="subject-detail">
+                  <span class="detail-icon">📍</span>
+                  <div class="detail-content">Phòng: 656 Tân Kỳ Tân Quý, Bình Hưng Hòa, Bình Tân, TP. HCM</div>
+                </div>
+              </div>
+
+              <div class="subject-item">
+                <p class="subject-title">Thực hành lập trình hướng đối tượng</p>
+                <div class="subject-detail">
+                  <span class="detail-icon">●</span>
+                  <div class="detail-content">
+                    <div class="subject-days">
+                      <span class="day-item">Thứ Hai</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="subject-detail">
+                  <span class="detail-icon">🕒</span>
+                  <div class="detail-content">Tiết: 7 - 11</div>
+                </div>
+                <div class="subject-detail">
+                  <span class="detail-icon">👤</span>
+                  <div class="detail-content">Giảng Viên: Trần Thị Mỹ Lệ</div>
+                </div>
+                <div class="subject-detail">
+                  <span class="detail-icon">📍</span>
+                  <div class="detail-content">Phòng: A209 - 140 Lê Trọng Tấn</div>
+                </div>
+              </div>
+
+              <div class="subject-item">
+                <p class="subject-title">Lập trình hướng đối tượng</p>
+                <div class="subject-detail">
+                  <span class="detail-icon">●</span>
+                  <div class="detail-content">
+                    <div class="subject-days">
+                      <span class="day-item">Thứ Sáu</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="subject-detail">
+                  <span class="detail-icon">🕒</span>
+                  <div class="detail-content">Tiết: 1 - 3</div>
+                </div>
+                <div class="subject-detail">
+                  <span class="detail-icon">👤</span>
+                  <div class="detail-content">Giảng Viên: Đinh Thị Tâm</div>
+                </div>
+                <div class="subject-detail">
+                  <span class="detail-icon">📍</span>
+                  <div class="detail-content">Phòng: B202 - 140 Lê Trọng Tấn</div>
+                </div>
+              </div>
+
+              <div class="subject-item">
+                <p class="subject-title">Mạng máy tính</p>
+                <div class="subject-detail">
+                  <span class="detail-icon">●</span>
+                  <div class="detail-content">
+                    <div class="subject-days">
+                      <span class="day-item">Chủ Nhật</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="subject-detail">
+                  <span class="detail-icon">🕒</span>
+                  <div class="detail-content">Tiết: 1 - 3</div>
+                </div>
+                <div class="subject-detail">
+                  <span class="detail-icon">👤</span>
+                  <div class="detail-content">Giảng Viên: Nguyễn Khắc Điệp</div>
+                </div>
+                <div class="subject-detail">
+                  <span class="detail-icon">📍</span>
+                  <div class="detail-content">Phòng: B509 - 140 Lê Trọng Tấn</div>
+                </div>
+              </div>
+
+              <div class="subject-item">
+                <p class="subject-title">Chủ nghĩa xã hội khoa học</p>
+                <div class="subject-detail">
+                  <span class="detail-icon">●</span>
+                  <div class="detail-content">
+                    <div class="subject-days">
+                      <span class="day-item">Chủ Nhật</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="subject-detail">
+                  <span class="detail-icon">🕒</span>
+                  <div class="detail-content">Tiết: 10 - 12</div>
+                </div>
+                <div class="subject-detail">
+                  <span class="detail-icon">👤</span>
+                  <div class="detail-content">Giảng Viên: Nguyễn Thị Như Hoa</div>
+                </div>
+                <div class="subject-detail">
+                  <span class="detail-icon">📍</span>
+                  <div class="detail-content">Phòng: Zoom37</div>
+                </div>
+              </div>
+
+            <div class="subject-group">
+              <div class="subject-item">
+                <p class="subject-title">Đồ họa ứng dụng</p>
+                <div class="subject-detail">
+                  <span class="detail-icon">●</span>
+                  <div class="detail-content">
+                    <div class="subject-days">
+                      <span class="day-item">Thứ Bảy</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="subject-detail">
+                  <span class="detail-icon">🕒</span>
+                  <div class="detail-content">Tiết: 1 - 5</div>
+                </div>
+                <div class="subject-detail">
+                  <span class="detail-icon">👤</span>
+                  <div class="detail-content">Giảng Viên: Nguyễn Hoàng Anh</div>
+                </div>
+                <div class="subject-detail">
+                  <span class="detail-icon">📍</span>
+                  <div class="detail-content">Phòng: A109 - 140 Lê Trọng Tấn</div>
+                </div>
+              </div>
+            </div>
+          </section>
+      <!-- ======= CAC MON HOC =======-->
+
+       <!-- ======= LICH HOC =======-->
+      <section class="timetable-section">
+        <div class="timetable-header">
+          <button class="custom-btn"><i class="fas fa-list"></i> Thời khoá biểu</button>
+        </div>
+        <div class="week-container">
+          <div class="day-column">
+            <h3>Thứ Hai</h3>
+            <div class="class-item class-mon-1">
+              <div class="class-name">Thể chất 2</div>
+              <div class="class-time">Tiết: 3 - 6</div>
+              <div class="class-room">Phòng: 656 Tân Kỳ Tân Quý, Bình Hưng Hòa, Bình Tân, TP. HCM</div>
+            </div>
+            <div class="class-item class-mon-2">
+              <div class="class-name">Thực hành lập trình hướng đối tượng</div>
+              <div class="class-time">Tiết: 7 - 11</div>
+              <div class="class-room">Phòng: A209 - 140 Lê Trọng Tấn</div>
+            </div>
+          </div>
+
+          <div class="day-column">
+            <h3>Thứ Ba</h3>
+            <div class="class-item class-mon-3">
+              <div class="class-name">Thiết kế web</div>
+              <div class="class-time">Tiết: 1 - 5</div>
+              <div class="class-room">Phòng: A107 - 140 Lê Trọng Tấn</div>
+            </div>
+            <div class="class-item class-mon-4">
+              <div class="class-name">Anh văn 2</div>
+              <div class="class-time">Tiết: 7 - 9</div>
+              <div class="class-room">Phòng: D302 - 140 Lê Trọng Tấn</div>
+            </div>
+          </div>
+
+          <div class="day-column">
+            <h3>Thứ Tư</h3>
+            <div class="class-item class-mon-5">
+              <div class="class-name">Cơ sở dữ liệu</div>
+              <div class="class-time">Tiết: 1 - 3</div>
+              <div class="class-room">Phòng: A501 - 140 Lê Trọng Tấn</div>
+            </div>
+          </div>
+          
+          <div class="day-column">
+            <h3>Thứ Năm</h3>
+            <div class="class-item class-mon-3">
+              <div class="class-name">Thiết kế web</div>
+              <div class="class-time">Tiết: 1 - 6</div>
+              <div class="class-room">Phòng: A110 - 140 Lê Trọng Tấn</div>
+            </div>
+          </div>
+
+          <div class="day-column">
+            <h3>Thứ Sáu</h3>
+            <div class="class-item class-mon-6">
+              <div class="class-name">Lập trình hướng đối tượng</div>
+              <div class="class-time">Tiết: 1 - 3</div>
+              <div class="class-room">Phòng: B202 - 140 Lê Trọng Tấn</div>
+            </div>
+          </div>
+
+          <div class="day-column">
+            <h3>Thứ Bảy</h3>
+            <div class="class-item class-mon-7">
+              <div class="class-name">Đồ hoạ ứng dụng</div>
+              <div class="class-time">Tiết: 1 - 5</div>
+              <div class="class-room">Phòng: A109 - 140 Lê Trọng Tấn</div>
+            </div>
+          </div>
+
+          <div class="day-column">
+            <h3>Chủ Nhật</h3>
+            <div class="class-item class-mon-8">
+              <div class="class-name">Mạng máy tính</div>
+              <div class="class-time">Tiết: 1 - 3</div>
+              <div class="class-room">Phòng: B509 - 140 Lê Trọng Tấn</div>
+            </div>
+            <div class="class-item class-mon-9">
+              <div class="class-name">Chủ nghĩa xã hội khoa học</div>
+              <div class="class-time">Tiết: 10 - 12</div>
+              <div class="class-room">Phòng: Zoom37</div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ======= LICH HOC =======-->
+    </main>
+    <!---------------NỘI DUNG CHÍNH---------------->
+  </div>
+</body>
+</html>

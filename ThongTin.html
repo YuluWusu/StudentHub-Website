@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Hub - Thông Tin Chi Tiết</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/ThongTin.css" />
+    <link rel="stylesheet" href="css/CaiDatMacDinh.css" />
+    <link rel="icon" type="image/x-icon" href="object/Logo HUIT-01.ico">
+    <script src="javascript/ThongTin.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <img src="object/huitpng.png" alt="Logo" class="logo" />
+      <h1><a href="Trangchu.html">Student Hub</a></h1>
+    </header>
+    <div class="layout">
+      <!---------------THANH DOC--------------->
+      <!----------------POPUP----------------->
+      <div class="popup-overlay" id="popup-overlay">
+        <div class="popup">
+          <span class="close-btn" onclick="closePopup()">&times;</span>
+          <h2 id="popup-title">thao tác</h2>
+          <form onsubmit="submitForm(event)">
+                <div class="mb-3" id="text-input-group">
+            <label for="popup-content" class="form-label">Tên </label>
+            <textarea
+              id="popup-content"
+              class="form-control"
+              rows="1"
+             
+            ></textarea>
+          </div>
+
+           <!-- Input file -->
+        <div class="mb-3 d-none" id="file-input-group">
+          <label for="popup-file" class="form-label">Chọn tệp</label>
+          <input type="file" id="popup-file" class="form-control" />
+        </div>
+
+          <div class="mb-3">
+            <label for="popup-date" class="form-label">Ngày thêm</label>
+            <input type="date" id="popup-date" class="form-control" required />
+          </div>
+          <button type="submit" class="btn btn-primary">Lưu</button>
+        </div>
+          </form>
+          
+      </div>
+      <script src="javascript/thaotac.js"></script>
+      <!----------------------POPUP------------------->
+      <aside class="sidebar">
+        <p class="sidebar-title">Thao tác</p>
+        <div class="actions">
+          <button
+            class="btn btn-custom mb-2 w-100 text-start"
+            onclick="openPopup('Thêm bài tập')"
+          >
+            <i class="fas fa-plus me-2"></i> Thêm bài tập
+          </button>
+          <button
+            class="btn btn-custom mb-2 w-100 text-start"
+            onclick="openPopup('Thêm tiểu luận')"
+          >
+            <i class="fas fa-file-alt me-2"></i> Thêm tiểu luận
+          </button>
+          <button
+            class="btn btn-custom mb-2 w-100 text-start"
+            onclick="openPopup('Thêm môn học')"
+          >
+            <i class="fas fa-book me-2"></i> Thêm môn học
+          </button>
+          <button
+            class="btn btn-custom mb-2 w-100 text-start"
+            onclick="openPopup('Thêm vào lịch học')"
+          >
+            <i class="fas fa-calendar-plus me-2"></i> Thêm vào lịch học
+          </button>
+          <button
+            class="btn btn-custom mb-2 w-100 text-start"
+            onclick="openPopup('Đăng tài liệu')"
+          >
+            <i class="fas fa-upload me-2"></i> Đăng tài liệu
+          </button>
+          <button
+            class="btn btn-custom mb-2 w-100 text-start"
+            onclick="openPopup('Tải tài liệu')"
+          >
+            <i class="fas fa-download me-2"></i> Tải tài liệu
+          </button>
+        </div>
+
+        <nav class="main-nav">
+          <p class="sidebar-title">Bảng điều khiển</p>
+          <ul class="list-unstyled">
+            <li class="nav-item-custom">
+              <a href="Khoahoc.html" class="nav-link-custom">
+                <i class="fas fa-graduation-cap me-2"></i> Khoá học
+              </a>
+            </li>
+            <li class="nav-item-custom">
+              <a href="Ghichu.html" class="nav-link-custom">
+                <i class="fas fa-sticky-note me-2"></i> Ghi chú
+              </a>
+            </li>
+            <li class="nav-item-custom">
+              <a href="Kehoach.html" class="nav-link-custom">
+                <i class="fas fa-tasks me-2"></i> Kế hoạch
+              </a>
+            </li>
+            <li class="nav-item-custom">
+              <a href="Tieuluan.html" class="nav-link-custom">
+                <i class="fas fa-file-signature me-2"></i> Bài tiểu luận
+              </a>
+            </li>
+            <li class="nav-item-custom">
+              <a href="Baitap.html" class="nav-link-custom">
+                <i class="fas fa-book-open me-2"></i> Bài tập
+              </a>
+            </li>
+            <li class="nav-item-custom">
+              <a href="Sach.html" class="nav-link-custom">
+                <i class="fas fa-book me-2"></i> Sách
+              </a>
+            </li>
+            <li class="nav-item-custom">
+              <a href="Tailieuhoctap.html" class="nav-link-custom">
+                <i class="fas fa-file-pdf me-2"></i> Tài liệu học tập
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="links">
+          <a
+            href="#"
+            class="d-flex align-items-center gap-2 py-2 px-3 text-decoration-none"
+          >
+            <i class="fas fa-cog"></i> Cài đặt
+          </a>
+          <a
+            href="#"
+            class="d-flex align-items-center gap-2 py-2 px-3 text-decoration-none"
+          >
+            <i class="fas fa-question-circle"></i> Trợ giúp
+          </a>
+          <a
+            href="DangKyDangNhap.html"
+            class="d-flex align-items-center gap-2 py-2 px-3 text-decoration-none"
+          >
+            <i class="fas fa-sign-out-alt"></i> Đăng xuất
+          </a>
+        </div>
+      </aside>
+
+    <!---------------NỘI DUNG CHÍNH---------------->
+    <main class="main">
+      <div class="container-fluid">
+        <div class="row">
+          <!-- Cột trái - Thông tin cá nhân -->
+          <div class="col-md-3">
+            <div class="profile-section">
+              <div class="image-prof">
+                <img src="object/philong.png" alt="avatar" class="profile-img">
+              </div>
+              <div class="basic-info">
+                <div class="info-item d-flex">
+                  <div class="info-label">MSSV:</div>
+                  <div class="info-value">2001240256</div>
+                </div>
+                <div class="info-item d-flex">
+                  <div class="info-label">Họ tên:</div>
+                  <div class="info-value">Hoàng Xuân Phi Long</div>
+                </div>
+                <div class="info-item d-flex">
+                  <div class="info-label">Giới tính:</div>
+                  <div class="info-value">Nam</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cột phải - Thông tin chi tiết -->
+          <div class="col-md-9">
+            <!-- Thông tin học vấn -->
+            <div class="info-section">
+              <h2 class="info-title-main">Thông tin học vấn</h2>
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="info-item d-flex">
+                    <div class="info-label">Trạng thái:</div>
+                    <div class="info-value">Đang học</div>
+                  </div>
+                  <div class="info-item d-flex">
+                    <div class="info-label">Mã hồ sơ:</div>
+                    <div class="info-value">2001240256</div>
+                  </div>
+                  <div class="info-item d-flex">
+                    <div class="info-label">Ngày vào trường:</div>
+                    <div class="info-value">19/8/2024</div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="info-item d-flex">
+                    <div class="info-label">Lớp học:</div>
+                    <div class="info-value">150HTH01</div>
+                  </div>
+                  <div class="info-item d-flex">
+                    <div class="info-label">Cơ sở:</div>
+                    <div class="info-value">ĐHCT TP.HCM</div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="info-item d-flex">
+                    <div class="info-label">Bậc đào tạo:</div>
+                    <div class="info-value">Đại học</div>
+                  </div>
+                  <div class="info-item d-flex">
+                    <div class="info-label">Loại hình đào tạo:</div>
+                    <div class="info-value">Chính quy</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="info-item d-flex">
+                    <div class="info-label">Khoa:</div>
+                    <div class="info-value">Khoa Công nghệ Thông tin</div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="info-item d-flex">
+                    <div class="info-label">Ngành:</div>
+                    <div class="info-value">Công nghệ thông tin</div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="info-item d-flex">
+                    <div class="info-label">Chuyên ngành:</div>
+                    <div class="info-value">Công nghệ phần mềm</div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="info-item d-flex">
+                    <div class="info-label">Khóa học:</div>
+                    <div class="info-value">2024</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Thông tin cá nhân -->
+            <div class="info-section">
+              <h2 class="info-title-main">Thông tin cá nhân</h2>
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="info-item d-flex">
+                    <div class="info-label">Ngày sinh:</div>
+                    <div class="info-value">15/09/2006</div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="info-item d-flex">
+                    <div class="info-label">Dân tộc:</div>
+                    <div class="info-value">Kinh</div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="info-item d-flex">
+                    <div class="info-label">Tôn giáo:</div>
+                    <div class="info-value">Không</div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="info-item d-flex">
+                    <div class="info-label">Quốc tịch:</div>
+                    <div class="info-value">Việt Nam</div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="info-item d-flex">
+                    <div class="info-label">Khu vực:</div>
+                    <div class="info-value"></div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="info-item d-flex">
+                    <div class="info-label">Số CCCD:</div>
+                    <div class="info-value">045206007798</div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="info-item d-flex">
+                    <div class="info-label">Ngày cấp:</div>
+                    <div class="info-value">25/09/2021</div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="info-item d-flex">
+                    <div class="info-label">Nơi cấp:</div>
+                    <div class="info-value">Quảng Trị</div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="info-item d-flex">
+                    <div class="info-label">Đối tượng:</div>
+                    <div class="info-value"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="info-item d-flex">
+                    <div class="info-label">Diện chính sách:</div>
+                    <div class="info-value"></div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="info-item d-flex">
+                    <div class="info-label">Ngày vào Đoàn:</div>
+                    <div class="info-value"></div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="info-item d-flex">
+                    <div class="info-label">Ngày vào Đảng:</div>
+                    <div class="info-value"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="info-item d-flex">
+                    <div class="info-label">Điện thoại:</div>
+                    <div class="info-value">0357534303</div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="info-item d-flex">
+                    <div class="info-label">Email:</div>
+                    <div class="info-value">yuluwusu@gmail.com</div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="info-item d-flex">
+                    <div class="info-label">Địa chỉ liên hệ:</div>
+                    <div class="info-value"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="info-item d-flex">
+                    <div class="info-label">Nơi sinh:</div>
+                    <div class="info-value">Quảng Trị</div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12">
+                  <div class="info-item d-flex">
+                    <div class="info-label">Hộ khẩu thường trú:</div>
+                    <div class="info-value">35/1 nguyễn văn lĩnh, khu phố phú thị, Thị trấn Hồ Xá, Huyện Vĩnh Linh, Tỉnh Quảng Trị</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Quan hệ gia đình -->
+            <div class="info-section">
+              <h2 class="info-title-main">Quan hệ gia đình</h2>
+              
+              <!-- Thông tin Cha -->
+              <div class="family-section">
+                <h4 class="family-title">Thông tin Cha</h4>
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="info-item d-flex">
+                      <div class="info-label">Họ tên:</div>
+                      <div class="info-value">Hoàng Xuân Hanh</div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="info-item d-flex">
+                      <div class="info-label">Năm sinh:</div>
+                      <div class="info-value">1968</div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="info-item d-flex">
+                      <div class="info-label">Nghề nghiệp:</div>
+                      <div class="info-value">Tài Xế</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="info-item d-flex">
+                      <div class="info-label">Quốc tịch:</div>
+                      <div class="info-value"></div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="info-item d-flex">
+                      <div class="info-label">Dân tộc:</div>
+                      <div class="info-value"></div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="info-item d-flex">
+                      <div class="info-label">Tôn giáo:</div>
+                      <div class="info-value"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="info-item d-flex">
+                      <div class="info-label">Cơ quan công tác:</div>
+                      <div class="info-value"></div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="info-item d-flex">
+                      <div class="info-label">Chức vụ:</div>
+                      <div class="info-value"></div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="info-item d-flex">
+                      <div class="info-label">Điện thoại:</div>
+                      <div class="info-value">0913456791</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="info-item d-flex">
+                      <div class="info-label">Hộ khẩu:</div>
+                      <div class="info-value"></div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="info-item d-flex">
+                      <div class="info-label">Chỗ ở hiện nay:</div>
+                      <div class="info-value"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Thông tin Mẹ -->
+              <div class="family-section">
+                <h4 class="family-title">Thông tin Mẹ</h4>
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="info-item d-flex">
+                      <div class="info-label">Họ tên:</div>
+                      <div class="info-value">Nguyễn Thị Thanh Hiền</div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="info-item d-flex">
+                      <div class="info-label">Năm sinh:</div>
+                      <div class="info-value">1972</div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="info-item d-flex">
+                      <div class="info-label">Nghề nghiệp:</div>
+                      <div class="info-value">Buôn Bán</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="info-item d-flex">
+                      <div class="info-label">Quốc tịch:</div>
+                      <div class="info-value"></div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="info-item d-flex">
+                      <div class="info-label">Dân tộc:</div>
+                      <div class="info-value"></div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="info-item d-flex">
+                      <div class="info-label">Tôn giáo:</div>
+                      <div class="info-value"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="info-item d-flex">
+                      <div class="info-label">Cơ quan công tác:</div>
+                      <div class="info-value"></div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="info-item d-flex">
+                      <div class="info-label">Chức vụ:</div>
+                      <div class="info-value"></div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="info-item d-flex">
+                      <div class="info-label">Điện thoại:</div>
+                      <div class="info-value">0948460559</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="info-item d-flex">
+                      <div class="info-label">Hộ khẩu:</div>
+                      <div class="info-value"></div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="info-item d-flex">
+                      <div class="info-label">Chỗ ở hiện nay:</div>
+                      <div class="info-value"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

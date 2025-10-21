@@ -1,0 +1,333 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Hub - Kế Hoạch</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <link rel="stylesheet" href="css/Kehoach.css" />
+    <link rel="stylesheet" href="css/CaiDatMacDinh.css" />
+    <link rel="icon" type="image/x-icon" href="object/Logo HUIT-01.ico">
+    <script src="javascript/Kehoach.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <img src="object/huitpng.png" alt="Logo" class="logo" />
+      <h1><a href="Trangchu.html">Student Hub</a></h1>
+    </header>
+    <div class="layout">
+      <!---------------THANH DOC--------------->
+      <!----------------POPUP----------------->
+      <div class="popup-overlay" id="popup-overlay">
+        <div class="popup">
+          <span class="close-btn" onclick="closePopup()">&times;</span>
+          <h2 id="popup-title">thao tác</h2>
+          <form onsubmit="submitForm(event)">
+                <div class="mb-3" id="text-input-group">
+            <label for="popup-content" class="form-label">Tên </label>
+            <textarea
+              id="popup-content"
+              class="form-control"
+              rows="1"
+             
+            ></textarea>
+          </div>
+
+           <!-- Input file -->
+        <div class="mb-3 d-none" id="file-input-group">
+          <label for="popup-file" class="form-label">Chọn tệp</label>
+          <input type="file" id="popup-file" class="form-control" />
+        </div>
+
+          <div class="mb-3">
+            <label for="popup-date" class="form-label">Ngày thêm</label>
+            <input type="date" id="popup-date" class="form-control" required />
+          </div>
+          <button type="submit" class="btn btn-primary">Lưu</button>
+        </div>
+          </form>
+          
+      </div>
+      <script src="javascript/thaotac.js"></script>
+      <!----------------------POPUP------------------->
+      <aside class="sidebar">
+        <p class="sidebar-title">Thao tác</p>
+        <div class="actions">
+          <button
+            class="btn btn-custom mb-2 w-100 text-start"
+            onclick="openPopup('Thêm bài tập')"
+          >
+            <i class="fas fa-plus me-2"></i> Thêm bài tập
+          </button>
+          <button
+            class="btn btn-custom mb-2 w-100 text-start"
+            onclick="openPopup('Thêm tiểu luận')"
+          >
+            <i class="fas fa-file-alt me-2"></i> Thêm tiểu luận
+          </button>
+          <button
+            class="btn btn-custom mb-2 w-100 text-start"
+            onclick="openPopup('Thêm môn học')"
+          >
+            <i class="fas fa-book me-2"></i> Thêm môn học
+          </button>
+          <button
+            class="btn btn-custom mb-2 w-100 text-start"
+            onclick="openPopup('Thêm vào lịch học')"
+          >
+            <i class="fas fa-calendar-plus me-2"></i> Thêm vào lịch học
+          </button>
+          <button
+            class="btn btn-custom mb-2 w-100 text-start"
+            onclick="openPopup('Đăng tài liệu')"
+          >
+            <i class="fas fa-upload me-2"></i> Đăng tài liệu
+          </button>
+          <button
+            class="btn btn-custom mb-2 w-100 text-start"
+            onclick="openPopup('Tải tài liệu')"
+          >
+            <i class="fas fa-download me-2"></i> Tải tài liệu
+          </button>
+        </div>
+
+        <nav class="main-nav">
+          <p class="sidebar-title">Bảng điều khiển</p>
+          <ul class="list-unstyled">
+            <li class="nav-item-custom">
+              <a href="Khoahoc.html" class="nav-link-custom">
+                <i class="fas fa-graduation-cap me-2"></i> Khoá học
+              </a>
+            </li>
+            <li class="nav-item-custom">
+              <a href="Ghichu.html" class="nav-link-custom">
+                <i class="fas fa-sticky-note me-2"></i> Ghi chú
+              </a>
+            </li>
+            <li class="nav-item-custom">
+              <a href="Kehoach.html" class="nav-link-custom">
+                <i class="fas fa-tasks me-2"></i> Kế hoạch
+              </a>
+            </li>
+            <li class="nav-item-custom">
+              <a href="Tieuluan.html" class="nav-link-custom">
+                <i class="fas fa-file-signature me-2"></i> Bài tiểu luận
+              </a>
+            </li>
+            <li class="nav-item-custom">
+              <a href="Baitap.html" class="nav-link-custom">
+                <i class="fas fa-book-open me-2"></i> Bài tập
+              </a>
+            </li>
+            <li class="nav-item-custom">
+              <a href="Sach.html" class="nav-link-custom">
+                <i class="fas fa-book me-2"></i> Sách
+              </a>
+            </li>
+            <li class="nav-item-custom">
+              <a href="Tailieuhoctap.html" class="nav-link-custom">
+                <i class="fas fa-file-pdf me-2"></i> Tài liệu học tập
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="links">
+          <a
+            href="#"
+            class="d-flex align-items-center gap-2 py-2 px-3 text-decoration-none"
+          >
+            <i class="fas fa-cog"></i> Cài đặt
+          </a>
+          <a
+            href="#"
+            class="d-flex align-items-center gap-2 py-2 px-3 text-decoration-none"
+          >
+            <i class="fas fa-question-circle"></i> Trợ giúp
+          </a>
+          <a
+            href="DangKyDangNhap.html"
+            class="d-flex align-items-center gap-2 py-2 px-3 text-decoration-none"
+          >
+            <i class="fas fa-sign-out-alt"></i> Đăng xuất
+          </a>
+        </div>
+      </aside>
+        <!---------------THANH DOC--------------->
+        <!---------------NỘI DUNG CHÍNH---------------->
+        <main class="main">
+            <div class="main-kehoach">
+                <!---------------THANH TRAI--------------->
+                <div class="thanhtrai">
+                    <span class="panel-title"><i class="fas fa-calendar-week"></i> Lịch trình</span>
+                    <div class="lich-trinh">
+                        <div class="tuan-hien-tai">
+                            <h3>Tuần này</h3>
+                            <div class="ngay-trong-tuan">
+                                <div class="ngay active">
+                                    <span class="thu">T2</span>
+                                    <span class="so">15</span>
+                                </div>
+                                <div class="ngay">
+                                    <span class="thu">T3</span>
+                                    <span class="so">16</span>
+                                </div>
+                                <div class="ngay">
+                                    <span class="thu">T4</span>
+                                    <span class="so">17</span>
+                                </div>
+                                <div class="ngay">
+                                    <span class="thu">T5</span>
+                                    <span class="so">18</span>
+                                </div>
+                                <div class="ngay">
+                                    <span class="thu">T6</span>
+                                    <span class="so">19</span>
+                                </div>
+                                <div class="ngay">
+                                    <span class="thu">T7</span>
+                                    <span class="so">20</span>
+                                </div>
+                                <div class="ngay">
+                                    <span class="thu">CN</span>
+                                    <span class="so">21</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="su-kien-sap-toi">
+                            <h3>Sự kiện sắp tới</h3>
+                            <div class="su-kien">
+                                <div class="thoi-gian">09:00</div>
+                                <div class="chi-tiet">
+                                    <div class="ten">Họp nhóm Dự án</div>
+                                    <div class="dia-diem">Thư viện</div>
+                                </div>
+                            </div>
+                            <div class="su-kien">
+                                <div class="thoi-gian">14:00</div>
+                                <div class="chi-tiet">
+                                    <div class="ten">Nộp bài tập lớn</div>
+                                    <div class="dia-diem">Online</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!---------------NỘI DUNG CHÍNH--------------->
+                <div class="noidung-chinh">
+                    <div class="tieu-de-trang">
+                        <h1><i class="fas fa-tasks"></i> <b>Kế hoạch học tập</b></h1>
+                        <p>Quản lý và theo dõi tiến độ học tập của bạn</p>
+                    </div>
+
+                    <form class="form-them-kehoach">
+                        <div class="nhap-lieu">
+                            <input type="text" placeholder="Tên kế hoạch..." class="input-ten">
+                            <input type="date" class="input-ngay">
+                            <button type="submit" class="btn-them">
+                                <i class="fas fa-plus"></i>Thêm kế hoạch
+                            </button>
+                        </div>
+                    </form>
+
+                    <div class="danh-sach-kehoach">
+                        <div class="kehoach-item hoan-thanh">
+                            <div class="noi-dung-kehoach">
+                                <div class="ten-kehoach">thi giữa kỳ cơ sở lập trình</div>
+                                <div class="mo-ta">Chương 4-5: Cấu trúc và mảng cấu trúc</div>
+                                <div class="thong-tin-them">
+                                    <span class="ngay-het">Hạn: 8/10/2025</span>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="kehoach-item dang-thuc-hien">
+                            <div class="noi-dung-kehoach">
+                                <div class="ten-kehoach">Hoàn thành bài tiểu luận thống kê ứng dụng</div>
+                                <div class="mo-ta">Chủ đề: Đánh giá độ ứng dụng AI trong học tập</div>
+                                <div class="thong-tin-them">
+                                    <span class="ngay-het">Hạn: 20/10/2025</span>
+                                </div>
+                            </div>    
+                        </div>
+
+                        <div class="kehoach-item chua-bat-dau">
+                            <div class="noi-dung-kehoach">
+                                <div class="ten-kehoach">Chuẩn bị thuyết trình Nhóm</div>
+                                <div class="mo-ta">Slide và nội dung cho bài thuyết trình KTCT</div>
+                                <div class="thong-tin-them">
+                                    <span class="ngay-het">Hạn: 25/10/2025</span>
+                                </div>
+                            </div>                         
+                        </div>
+                    </div>
+                </div>
+
+                <!---------------THANH PHAI--------------->
+                <div class="thanhphai">
+                    <div class="panel-title"><i class="fas fa-chart-line"></i> Thống kê</div>
+                    <div class="thong-ke">
+                        <div class="so-lieu">
+                            <div class="so-lieu-item">
+                                <div class="so">12</div>
+                                <div class="ten">Tổng kế hoạch</div>
+                            </div>
+                            <div class="so-lieu-item">
+                                <div class="so">8</div>
+                                <div class="ten">Đã hoàn thành</div>
+                            </div>
+                            <div class="so-lieu-item">
+                                <div class="so">3</div>
+                                <div class="ten">Đang thực hiện</div>
+                            </div>
+                            <div class="so-lieu-item">
+                                <div class="so">1</div>
+                                <div class="ten">Chưa bắt đầu</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel-title"><i class="fas fa-exclamation-circle"></i> Kế hoạch quan trọng</div>
+                    <div class="kehoach-quan-trong">
+                        <div class="kehoach-uu-tien">
+                            <div class="dau-mau" style="background:#ef4444"></div>
+                            <div class="noi-dung">
+                                <div class="ten">Thi cuối kỳ Toán</div>
+                                <div class="thoi-gian">Còn 5 ngày</div>
+                            </div>
+                        </div>
+                        <div class="kehoach-uu-tien">
+                            <div class="dau-mau" style="background:#f59e0b"></div>
+                            <div class="noi-dung">
+                                <div class="ten">Nộp đồ án tốt nghiệp</div>
+                                <div class="thoi-gian">Còn 14 ngày</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="javascript/Kehoach.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

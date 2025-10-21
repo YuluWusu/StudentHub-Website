@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Hub - Trang Chủ</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"      rel="stylesheet"    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"      rel="stylesheet"    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"    />
+    <link rel="stylesheet" href="css/Trangchu.css" />
+    <link rel="stylesheet" href="css/CaiDatMacDinh.css" />
+    <link rel="icon" type="image/x-icon" href="object/Logo HUIT-01.ico">
+    <script src="javascript/Trangchu.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <img src="object/huitpng.png" alt="Logo" class="logo" />
+      <h1><a href="Trangchu.html">Student Hub</a></h1>
+    </header>
+    <div class="layout">
+      <!---------------THANH DOC--------------->
+      <!----------------POPUP----------------->
+      <div class="popup-overlay" id="popup-overlay">
+        <div class="popup">
+          <span class="close-btn" onclick="closePopup()">&times;</span>
+          <h2 id="popup-title">thao tác</h2>
+          <form onsubmit="submitForm(event)">
+                <div class="mb-3" id="text-input-group">
+            <label for="popup-content" class="form-label">Tên </label>
+            <textarea
+              id="popup-content"
+              class="form-control"
+              rows="1"
+             
+            ></textarea>
+          </div>
+
+           <!-- Input file -->
+        <div class="mb-3 d-none" id="file-input-group">
+          <label for="popup-file" class="form-label">Chọn tệp</label>
+          <input type="file" id="popup-file" class="form-control" />
+        </div>
+
+          <div class="mb-3">
+            <label for="popup-date" class="form-label">Ngày thêm</label>
+            <input type="date" id="popup-date" class="form-control" required />
+          </div>
+          <button type="submit" class="btn btn-primary">Lưu</button>
+        </div>
+          </form>
+          
+      </div>
+      <script src="javascript/thaotac.js"></script>
+      <!----------------------POPUP------------------->
+      <aside class="sidebar">
+        <p class="sidebar-title">Thao tác</p>
+        <div class="actions">
+          <button
+            class="btn btn-custom mb-2 w-100 text-start"
+            onclick="openPopup('Thêm bài tập')"
+          >
+            <i class="fas fa-plus me-2"></i> Thêm bài tập
+          </button>
+          <button
+            class="btn btn-custom mb-2 w-100 text-start"
+            onclick="openPopup('Thêm tiểu luận')"
+          >
+            <i class="fas fa-file-alt me-2"></i> Thêm tiểu luận
+          </button>
+          <button
+            class="btn btn-custom mb-2 w-100 text-start"
+            onclick="openPopup('Thêm môn học')"
+          >
+            <i class="fas fa-book me-2"></i> Thêm môn học
+          </button>
+          <button
+            class="btn btn-custom mb-2 w-100 text-start"
+            onclick="openPopup('Thêm vào lịch học')"
+          >
+            <i class="fas fa-calendar-plus me-2"></i> Thêm vào lịch học
+          </button>
+          <button
+            class="btn btn-custom mb-2 w-100 text-start"
+            onclick="openPopup('Đăng tài liệu')"
+          >
+            <i class="fas fa-upload me-2"></i> Đăng tài liệu
+          </button>
+          <button
+            class="btn btn-custom mb-2 w-100 text-start"
+            onclick="openPopup('Tải tài liệu')"
+          >
+            <i class="fas fa-download me-2"></i> Tải tài liệu
+          </button>
+        </div>
+
+        <nav class="main-nav">
+          <p class="sidebar-title">Bảng điều khiển</p>
+          <ul class="list-unstyled">
+            <li class="nav-item-custom">
+              <a href="Khoahoc.html" class="nav-link-custom">
+                <i class="fas fa-graduation-cap me-2"></i> Khoá học
+              </a>
+            </li>
+            <li class="nav-item-custom">
+              <a href="Ghichu.html" class="nav-link-custom">
+                <i class="fas fa-sticky-note me-2"></i> Ghi chú
+              </a>
+            </li>
+            <li class="nav-item-custom">
+              <a href="Kehoach.html" class="nav-link-custom">
+                <i class="fas fa-tasks me-2"></i> Kế hoạch
+              </a>
+            </li>
+            <li class="nav-item-custom">
+              <a href="Tieuluan.html" class="nav-link-custom">
+                <i class="fas fa-file-signature me-2"></i> Bài tiểu luận
+              </a>
+            </li>
+            <li class="nav-item-custom">
+              <a href="Baitap.html" class="nav-link-custom">
+                <i class="fas fa-book-open me-2"></i> Bài tập
+              </a>
+            </li>
+            <li class="nav-item-custom">
+              <a href="Sach.html" class="nav-link-custom">
+                <i class="fas fa-book me-2"></i> Sách
+              </a>
+            </li>
+            <li class="nav-item-custom">
+              <a href="Tailieuhoctap.html" class="nav-link-custom">
+                <i class="fas fa-file-pdf me-2"></i> Tài liệu học tập
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="links">
+          <a
+            href="#"
+            class="d-flex align-items-center gap-2 py-2 px-3 text-decoration-none"
+          >
+            <i class="fas fa-cog"></i> Cài đặt
+          </a>
+          <a
+            href="#"
+            class="d-flex align-items-center gap-2 py-2 px-3 text-decoration-none"
+          >
+            <i class="fas fa-question-circle"></i> Trợ giúp
+          </a>
+          <a
+            href="DangKyDangNhap.html"
+            class="d-flex align-items-center gap-2 py-2 px-3 text-decoration-none"
+          >
+            <i class="fas fa-sign-out-alt"></i> Đăng xuất
+          </a>
+        </div>
+      </aside>
+
+      <!---------------NỘI DUNG CHÍNH---------------->
+      <main class="main">
+        <!---------------THÔNG TIN SINH VIÊN---------------->
+        <div class="information-box">
+          <h2 class="info-title-main">Thông tin sinh viên</h2>
+
+          <div class="information-left">
+            <div class="info-item">
+              <span class="info-label">Nơi sinh:</span>
+              <span class="info-value">Quảng Trị</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">MSSV:</span>
+              <span class="info-value">2001240256</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Ngày sinh:</span>
+              <span class="info-value">15/09/2006</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Họ và tên:</span>
+              <span class="info-value">Hoàng Xuân Phi Long</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Trường:</span>
+              <span class="info-value">Trường Đại Học Công Thương TP.HCM</span>
+            </div>
+          </div>
+
+          <div class="image-prof">
+            <img
+              src="object/philong.png"
+              alt="profile image"
+            />
+          </div>
+
+          <div class="information-right">
+            <div class="info-item">
+              <span class="info-label">Khóa học:</span>
+              <span class="info-value">2024</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Lớp học:</span>
+              <span class="info-value">15DHTHD1</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Bậc đào tạo:</span>
+              <span class="info-value">Đại học</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Loại hình đào tạo:</span>
+              <span class="info-value">Chính quy</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Chuyên Ngành:</span>
+              <span class="info-value">Công nghệ thông tin</span>
+            </div>
+          </div>
+
+          <div class="view-details">
+            <a href="ThongTin.html">Xem thêm thông tin</a>
+          </div>
+        </div>
+
+        <!---------------CARD MON HOC---------------->
+        <div class="courses-header">
+          <button class="custom-btn">
+            <i class="fas fa-link"></i> Lối tắt
+          </button>
+        </div>
+        <section class="courses">
+          <div class="course-card card1">Anh Văn 2</div>
+          <div class="course-card card2">Thiết Kế Web</div>
+          <div class="course-card card3">Lập Trình Hướng Đối Tượng</div>
+          <div class="course-card card4">Cơ Sở Dữ Liệu</div>
+          <div class="course-card card5">Thể Chất 2</div>
+          <div class="course-card card6">Mạng Máy Tính</div>
+          <div class="course-card card7">Chủ Nghĩa Xã Hội Khoa Học</div>
+        </section>
+
+        <!---------------THOI KHOA BIEU---------------->
+        <section class="schedule">
+          <div class="schedule-header">
+            <button class="custom-btn">
+              <i class="fas fa-list"></i> Thời khoá biểu
+            </button>
+          </div>
+          <div class="week">
+            <div class="day-column">
+              <h3>Thứ Hai</h3>
+              <div class="class-card mon1">
+                <div class="class-title">Thể chất 2</div>
+                <div class="class-time">Tiết: 3 - 6</div>
+                <div class="class-location">
+                  Phòng: 656 Tân Kỳ Tân Quý, Bình Hưng Hòa, Bình Tân, TP. HCM
+                </div>
+              </div>
+              <div class="class-card mon2">
+                <div class="class-title">
+                  Thực hành lập trình hướng đối tượng
+                </div>
+                <div class="class-time">Tiết: 7 - 11</div>
+                <div class="class-location">Phòng: A209 - 140 Lê Trọng Tấn</div>
+              </div>
+            </div>
+
+            <div class="day-column">
+              <h3>Thứ Ba</h3>
+              <div class="class-card mon3">
+                <div class="class-title">Thiết kế web</div>
+                <div class="class-time">Tiết: 1 - 5</div>
+                <div class="class-location">Phòng: A107 - 140 Lê Trọng Tấn</div>
+              </div>
+              <div class="class-card mon4">
+                <div class="class-title">Anh văn 2</div>
+                <div class="class-time">Tiết: 7 - 9</div>
+                <div class="class-location">Phòng: D302 - 140 Lê Trọng Tấn</div>
+              </div>
+            </div>
+
+            <div class="day-column">
+              <h3>Thứ Tư</h3>
+              <div class="class-card mon5">
+                <div class="class-title">Cơ sở dữ liệu</div>
+                <div class="class-time">Tiết: 1 - 3</div>
+                <div class="class-location">Phòng: A501 - 140 Lê Trọng Tấn</div>
+              </div>
+            </div>
+
+            <div class="day-column">
+              <h3>Thứ Năm</h3>
+              <div class="class-card mon3">
+                <div class="class-title">Thiết kế web</div>
+                <div class="class-time">Tiết: 1 - 6</div>
+                <div class="class-location">Phòng: A110 - 140 Lê Trọng Tấn</div>
+              </div>
+            </div>
+
+            <div class="day-column">
+              <h3>Thứ Sáu</h3>
+              <div class="class-card mon6">
+                <div class="class-title">Lập trình hướng đối tượng</div>
+                <div class="class-time">Tiết: 1 - 3</div>
+                <div class="class-location">Phòng: B202 - 140 Lê Trọng Tấn</div>
+              </div>
+            </div>
+
+            <div class="day-column">
+              <h3>Thứ Bảy</h3>
+              <div class="class-card mon7">
+                <div class="class-title">Đồ hoạ ứng dụng</div>
+                <div class="class-time">Tiết: 1 - 5</div>
+                <div class="class-location">Phòng: A109 - 140 Lê Trọng Tấn</div>
+              </div>
+            </div>
+
+            <div class="day-column">
+              <h3>Chủ Nhật</h3>
+              <div class="class-card mon8">
+                <div class="class-title">Mạng máy tính</div>
+                <div class="class-time">Tiết: 1 - 3</div>
+                <div class="class-location">Phòng: B509 - 140 Lê Trọng Tấn</div>
+              </div>
+              <div class="class-card mon9">
+                <div class="class-title">Chủ nghĩa xã hội khoa học</div>
+                <div class="class-time">Tiết: 10 - 12</div>
+                <div class="class-location">Phòng: Zoom37</div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!---------------THOI KHOA BIEU---------------->
+
+        <!---------------LICH TRINH & CÁC PHẦN KHÁC---------------->
+        <div class="main-container">
+          <div>
+            <div class="calendar-container">
+              <button class="custom-btn">
+                <i class="fas fa-calendar-alt"></i> Lịch
+              </button>
+              <div class="calendar-header">
+                <div class="month">Tháng 9 Năm 2025</div>
+                <div class="calendar-controls">
+                  <button class="calendar-btn">
+                    <i class="fas fa-chevron-left"></i>
+                  </button>
+                  <button class="calendar-btn">Hôm nay</button>
+                  <button class="calendar-btn">
+                    <i class="fas fa-chevron-right"></i>
+                  </button>
+                </div>
+              </div>
+
+              <div class="calendar-weekdays">
+                <div>CN</div>
+                <div>T2</div>
+                <div>T3</div>
+                <div>T4</div>
+                <div>T5</div>
+                <div>T6</div>
+                <div>T7</div>
+              </div>
+
+              <div class="calendar-days">
+                <!-- Tuần 1 -->
+                <div class="day">1</div>
+                <div class="day">
+                  2
+                  <div class="event">● Họp nhóm</div>
+                </div>
+                <div class="day">3</div>
+                <div class="day">4</div>
+                <div class="day">5</div>
+                <div class="day">6</div>
+                <div class="day">7</div>
+
+                <!-- Tuần 2 -->
+                <div class="day">8</div>
+                <div class="day">9</div>
+                <div class="day">10</div>
+                <div class="day">11</div>
+                <div class="day">12</div>
+                <div class="day">13</div>
+                <div class="day">14</div>
+
+                <!-- Tuần 3 -->
+                <div class="day">15</div>
+                <div class="day">16</div>
+                <div class="day">17</div>
+                <div class="day">18</div>
+                <div class="day">19</div>
+                <div class="day">20</div>
+                <div class="day">21</div>
+
+                <!-- Tuần 4 -->
+                <div class="day">22</div>
+                <div class="day">23</div>
+                <div class="day">24</div>
+                <div class="day">25</div>
+                <div class="day">26</div>
+                <div class="day">27</div>
+                <div class="day">28</div>
+
+                <!-- Tuần 5 -->
+                <div class="day">29</div>
+                <div class="day">30</div>
+              </div>
+            </div>
+          </div>
+          <!--        CAC PHAN KHAC      -->
+          <div>
+            <div class="assignments-box">
+              <h3><i class="fas fa-book-open me-2"></i> Tiểu luận</h3>
+              <ul>
+                <li>Thuật Toán EFIM</li>
+                <li>Các kỹ thuật tấn công trên môi trường mạng</li>
+              </ul>
+            </div>
+
+            <div class="notes-box">
+              <h3><i class="fas fa-sticky-note me-2"></i> Ghi chú</h3>
+              <ul>
+                <li>Thiết Kế Web - Phải làm 3 trang web con cho đồ án</li>
+                <li>Thể Chất 2 - Hiện giờ thể chất đã có áp chuẩn CLO</li>
+              </ul>
+            </div>
+
+            <div class="drive-box">
+              <h3><i class="fas fa-hdd me-2"></i> Lưu trữ</h3>
+              <ul>
+                <li>Tieuluan.pdf</li>
+                <li>Thuyettrinh.pptx</li>
+                <li>BaoCaoNCKH.pptx</li>
+                <li>DataBaseTrainingAI.xts</li>
+                <li>videobaigiang.mp4</li>
+              </ul>
+            </div>
+
+            <div class="bookmarks-box">
+              <h3><i class="fas fa-bookmark me-2"></i> Sách</h3>
+              <ul>
+                <li>
+                  <a href="#"
+                    ><i class="fas fa-external-link-alt"></i> Ứng Dụng Thực Tế
+                    Của AI</a
+                  >
+                </li>
+                <li>
+                  <a href="#"
+                    ><i class="fas fa-external-link-alt"></i> Xác Suất Thống
+                    Kê</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div class="goals-box">
+              <h3><i class="fas fa-bullseye me-2"></i> Mục tiêu trong tháng</h3>
+              <ul>
+                <li>Đọc được 3 cuốn sách</li>
+                <li>Cải thiện GPA trên 3.6</li>
+                <li>Tham gia một câu lạc bộ mới</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

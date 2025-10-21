@@ -1,0 +1,394 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --muted: #888;
+    --glass: rgba(255,255,255,0.1);
+    --accent: #e41a6b;
+    --primary-bg: rgba(20, 20, 30, 0.7);
+    --card-bg: rgba(30, 30, 40, 0.7);
+    --text-primary: #f1f1f1;
+    --text-secondary: #ccc;
+    --border-color: rgba(255,255,255,0.1);
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    background: linear-gradient(135deg, #0f0f0f 0%, #1a1a2e 50%, #16213e 100%);
+    color: var(--text-primary);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+    a:visited, a:hover, a:active {
+        color: inherit;
+        text-decoration: none;
+    }
+
+/*=====MAIN CONTENT - KẾ HOẠCH========*/
+.main {
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .main-kehoach {
+            display: grid;
+            grid-template-columns: 300px 1fr 280px;
+            gap: 25px;
+            min-height: 800px;
+        }
+
+        /* ======== PANEL TRÁI ======== */
+        .thanhtrai {
+            background: var(--card-bg);
+            padding: 25px;
+            border-radius: 15px;
+            border: 1px solid var(--border-color);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .panel-title {
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: white;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* Lịch trình */
+        .lich-trinh {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .tuan-hien-tai h3,
+        .su-kien-sap-toi h3 {
+            color: var(--text-primary);
+            margin-bottom: 15px;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .ngay-trong-tuan {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+
+        .ngay {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 10px 5px;
+            border-radius: 8px;
+            background: rgba(255,255,255,0.05);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .ngay.active {
+            background: var(--accent);
+            color: white;
+        }
+
+        .ngay:hover {
+            background: var(--glass);
+        }
+
+        .ngay .thu {
+            font-size: 12px;
+            margin-bottom: 5px;
+        }
+
+        .ngay .so {
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        /* Sự kiện */
+        .su-kien {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 8px;
+            margin-bottom: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .su-kien:hover {
+            background: var(--glass);
+            transform: translateX(5px);
+        }
+
+        .su-kien .thoi-gian {
+            font-weight: bold;
+            color: var(--accent);
+            min-width: 45px;
+        }
+
+        .su-kien .chi-tiet .ten {
+            font-weight: 500;
+            margin-bottom: 2px;
+        }
+
+        .su-kien .chi-tiet .dia-diem {
+            font-size: 12px;
+            color: var(--muted);
+        }
+
+        /* Nội dung chính */
+        .noidung-chinh {
+            background: var(--card-bg);
+            border-radius: 15px;
+            padding: 25px;
+            border: 1px solid var(--border-color);
+        }
+
+        /* Tiêu đề trang */
+        .tieu-de-trang {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .tieu-de-trang h1 {
+            font-size: 32px;
+            margin-bottom: 8px;
+            background: linear-gradient(90deg, #ffffff, #a0a0ff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .tieu-de-trang p {
+            color: var(--muted);
+            font-size: 16px;
+        }
+
+        /* Form thêm kế hoạch */
+        .form-them-kehoach {
+            background: rgba(255,255,255,0.05);
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 25px;
+            border: 1px solid var(--border-color);
+        }
+
+        .nhap-lieu {
+            display: grid;
+            grid-template-columns: 2fr 1fr auto;
+            gap: 12px;
+            align-items: center;
+        }
+
+        .input-ten,
+        .input-ngay {
+            padding: 12px 15px;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            background: rgba(0,0,0,0.3);
+            color: var(--text-primary);
+            font-size: 14px;
+        }
+
+        .btn-them {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-them:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        }
+
+        /* Danh sách kế hoạch */
+        .danh-sach-kehoach {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .kehoach-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 20px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 12px;
+            border-left: 4px solid var(--muted);
+            transition: all 0.3s ease;
+        }
+
+        .kehoach-item:hover {
+            background: rgba(255,255,255,0.08);
+            transform: translateY(-2px);
+        }
+
+        .kehoach-item.hoan-thanh {
+            border-left-color: #10b981;
+            opacity: 0.7;
+        }
+
+        .kehoach-item.dang-thuc-hien {
+            border-left-color: #f59e0b;
+        }
+
+        .kehoach-item.chua-bat-dau {
+            border-left-color: #6b7280;
+        }
+
+
+        .noi-dung-kehoach {
+            flex: 1;
+        }
+
+        .ten-kehoach {
+            font-weight: 600;
+            margin-bottom: 5px;
+            font-size: 16px;
+        }
+
+        .mo-ta {
+            color: var(--muted);
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+
+        .thong-tin-them {
+            display: flex;
+            gap: 15px;
+            font-size: 12px;
+        }
+
+        .ngay-het {
+            color: var(--muted);
+        }
+
+       
+
+
+        /* ======== PANEL PHẢI ======== */
+        .thanhphai {
+            background: var(--card-bg);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 25px;
+            border: 1px solid var(--border-color);
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Thống kê */
+        .thong-ke {
+            margin-bottom: 25px;
+        }
+
+        .so-lieu {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        .so-lieu-item {
+            background: rgba(255,255,255,0.05);
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .so-lieu-item:hover {
+            background: var(--glass);
+            transform: translateY(-2px);
+        }
+
+        .so-lieu-item .so {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--accent);
+            margin-bottom: 5px;
+        }
+
+        .so-lieu-item .ten {
+            font-size: 12px;
+            color: var(--muted);
+        }
+
+        /* Kế hoạch quan trọng */
+        .kehoach-quan-trong {
+            margin-top: 10px;
+        }
+
+        .kehoach-uu-tien {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 15px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 8px;
+            margin-bottom: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .kehoach-uu-tien:hover {
+            background: var(--glass);
+            transform: translateX(5px);
+        }
+
+        .kehoach-uu-tien .dau-mau {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+        }
+
+        .kehoach-uu-tien .noi-dung .ten {
+            font-weight: 500;
+            margin-bottom: 2px;
+        }
+
+        .kehoach-uu-tien .noi-dung .thoi-gian {
+            font-size: 12px;
+            color: var(--muted);
+        }
+/* Hiệu ứng fade-in */
+.thanhtrai, .noidung-chinh, .thanhphai,
+.ngay, .su-kien, .kehoach-item,
+.so-lieu-item, .kehoach-uu-tien {
+    opacity: 0;
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
