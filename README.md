@@ -8,7 +8,7 @@
 
 **Student Hub** is a comprehensive web interface designed to help students at HUIT (Ho Chi Minh City University of Industry and Trade) efficiently manage their academic life. It provides a central dashboard for organizing courses, assignments, study materials, and personal planning.
 
-[cite\_start]This repository contains the front-end structure (HTML/CSS/JS) for the core pages of the application, focusing on a modern and engaging user experience.
+This repository contains the front-end structure (HTML/CSS/JS) for the core pages of the application, focusing on a modern and engaging user experience.
 
 ## 🎨 Design & UI Highlights
 
