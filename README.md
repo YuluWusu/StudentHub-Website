@@ -45,7 +45,7 @@ The application is structured around several dedicated modules:
 
 1.  **Clone the Repository:**
     ```bash
-    git clone [YOUR_GITHUB_REPO_LINK]
+    git clone https://github.com/YuluWusu/StudentHub-Website
     cd Student-Hub-Project
     ```
 2.  **Open the Files:**
